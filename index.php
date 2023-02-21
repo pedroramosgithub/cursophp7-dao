@@ -30,9 +30,25 @@ echo json_encode($usuarios); */
 
 // carrega um ususario usando o login e a senha 
 
+//$usuario = new usuario();
+//$usuario->login("jose","1234567890"); 
+//echo $usuario;
+
+// ISERIR NOVO USUARIO 
+//$aluno = new usuario();
+//$aluno->setDeslogin("aluno");
+//$aluno->setDessenha("@lun0");
+//$aluno->insert(); 
+//echo $aluno;
+
+// ISERIR NOVO USUARIO com construtor 
+//$aluno = new usuario("Frederico","44556677");
+//$aluno->insert(); 
+//echo $aluno;
+
+// update 
 $usuario = new usuario();
-$usuario->login("jose","1234567890"); 
-echo $usuario;
-
-
+$usuario->loadById(3);
+$usuario->update("profe","22334");
+echo $usuario; 
 ?>
