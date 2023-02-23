@@ -48,7 +48,12 @@ echo json_encode($usuarios); */
 
 // update 
 $usuario = new usuario();
-$usuario->loadById(3);
+$usuario->loadById(7);
 $usuario->update("profe","22334");
 echo $usuario; 
+// delete
+//$usuario = new usuario();
+//$usuario->loadById(3);
+//$usuario->delete();
+//echo $usuario; 
 ?>

@@ -125,7 +125,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		$sql->exc_query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
+		$sql->runquery("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
 			':LOGIN'=>$this->getDeslogin(),
 			':PASSWORD'=>$this->getDessenha(),
 			':ID'=>$this->getIdusuario()
@@ -137,7 +137,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+		$sql->runquery("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
 			':ID'=>$this->getIdusuario()
 		));
 
